@@ -31,8 +31,7 @@ bot = Client(
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(
-       f"𝐇𝐞𝐥𝐥𝐨 ❤️\n\n❈. 𝙷𝚒! 𝐈❜𝐦 𝐓𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭 \n\n 𝙶𝚒𝚟𝚎 𝐇𝐢𝐝𝐝𝐞𝐧 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝚝𝚘 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙵𝚛𝚘𝚖 𝚊 𝚃𝚎𝚡𝚝 𝚏𝚒𝚕𝚎.🎓✨..")
+    editable = await m.reply_text("Hello I am Txt file downloader\nI Can Download links listed in a txt file in the format **Name:link**\n\nBot Made by ADITYA⚡")
 
 
 @bot.on_message(filters.command("stop"))
@@ -42,7 +41,7 @@ async def restart_handler(_, m):
 
 
 
-@bot.on_message(filters.command(["testupld"]))
+@bot.on_message(filters.command(["downvid"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐀 𝐓𝐱𝐭 𝐅𝐢𝐥𝐞 𝐒𝐞𝐧𝐝 𝐇𝐞𝐫𝐞 ⏍')
     input: Message = await bot.listen(editable.chat.id)
@@ -149,7 +148,7 @@ async def account_login(bot: Client, m: Message):
              url =  "https://d26g5bnklkwsh4.cloudfront.net/" + id + "/master.m3u8"
 
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
-            name = f'{str(count).zfill(3)})〔«𝙼𝚎𝚗𝚍𝚊𝚡»〕{name1[:60]}'
+            name = f'{str(count).zfill(3)})〔«Aditya»〕{name1[:60]}'
 
             if "youtu" in url:
                 ytf = f"b[height<={raw_text2}][ext=mp4]/bv[height<={raw_text2}][ext=mp4]+ba[ext=m4a]/b[ext=mp4]"
@@ -163,8 +162,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'** {str(count).zfill(3)}.** {name1} ({res})〔«𝙼𝚎𝚗𝚍𝚊𝚡»〕.mkv\n\n **Bᴀᴛᴄʜ Nᴀᴍᴇ** » `{raw_text0}`\n\n**Dᴏᴡɴʟᴏᴀᴅᴇᴅ Bʏ : {MR}**'
-                cc1 = f'** {str(count).zfill(3)}.** {name1}〔«𝙼𝚎𝚗𝚍𝚊𝚡»〕.pdf \n\n**Bᴀᴛᴄʜ Nᴀᴍᴇ** » `{raw_text0}`\n\n**Dᴏᴡɴʟᴏᴀᴅᴇᴅ Bʏ : {MR}**'
+                cc = f'** {str(count).zfill(3)}.** {name1} ({res}).mkv\n\n **Bᴀᴛᴄʜ Nᴀᴍᴇ** » `{raw_text0}`\n\n**Dᴏᴡɴʟᴏᴀᴅᴇᴅ Bʏ : {MR}**'
+                cc1 = f'** {str(count).zfill(3)}.** {name1}.pdf \n\n**Bᴀᴛᴄʜ Nᴀᴍᴇ** » `{raw_text0}`\n\n**Dᴏᴡɴʟᴏᴀᴅᴇᴅ Bʏ : {MR}**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -190,7 +189,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"❊⟱ Downloading  ⟱❊ »\n\n📝 𝐍𝐚𝐦𝐞 » `{name}\n⌨ 𝐐𝐮𝐥𝐢𝐭𝐲 » {raw_text2}`\n\n**🔗 𝐔𝐑𝐋 »** {url}"
+                    Show = f"❊⟱ Downloading  ⟱❊ »\n\n📝 𝐍𝐚𝐦𝐞 » `{name}\n⌨ 𝐐𝐮a𝐥𝐢𝐭𝐲 » {raw_text2}`\n\n**🔗 𝐔𝐑𝐋 »** {url}"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
